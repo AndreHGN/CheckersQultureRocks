@@ -1,0 +1,45 @@
+
+#board {
+    outline: solid;
+    outline-color: black;
+    outline-width: 2px;
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    background-color: red;
+    width: 400px;
+    height: 400px;
+}
+
+#board .cell {
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+#board .white {
+    background-color: rgb(218, 235, 255);
+}
+
+#board .black {
+    background-color: rgb(73, 125, 184);
+}
+
+.piece {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.piece:hover{
+    cursor: grab;
+}
+
+.piece:active{
+    cursor: grabbing;
+}
+
+#winner {
+    visibility: hidden;
+}
